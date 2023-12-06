@@ -1,0 +1,255 @@
+/* Reset some default styles for better consistency */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body,
+h1, h2, h3, p, ul, li, table {
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color:#4b3153;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Styles for the menu */
+.main-menu {
+    background: #4b3153    ;
+    border-right: 1px solid #e5e5e5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    width: 60px;
+    overflow: hidden;
+    -webkit-transition: width .05s linear;
+    transition: width .05s linear;
+    -webkit-transform: translateZ(0) scale(1, 1);
+    z-index: 1000;
+}
+
+.main-menu > ul {
+    margin: 7px 0;
+}
+
+.main-menu li {
+    position: relative;
+    display: block;
+    width: 250px;
+    padding: 10px;
+}
+
+.main-menu li > a {
+    position: relative;
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #d5856d    ;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    -webkit-transform: translateZ(0) scale(1, 1);
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+    -webkit-box-shadow: inset 0 0 0 1px #d5856d    ;
+    box-shadow: inset 0 0 0 1px #d5856d    ;
+    -webkit-backface-visibility: hidden;
+    z-index: 2;
+}
+
+.main-menu .nav-icon {
+    position: relative;
+    display: table-cell;
+    width: 60px;
+    height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+/* Styles for the content area */
+.content {
+    padding: 10px;
+    background: #fff;
+    min-height: 460px;
+    width: calc(100% - 60px); /* Adjusted width to account for the menu */
+    margin-left: 60px; /* Margin to create space for the menu */
+    -webkit-transition: width .05s linear;
+    transition: width .05s linear;
+
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+/* Styles for the table */
+.table-wrapper {
+    background: #e2e4ea    ;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgb(75,49,83)    ;
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: rgb(75,49,83)    ;
+}
+
+.fl-table th, .fl-table td {
+    text-align: center;
+    padding: 8px;
+}
+
+/* Highlight table header */
+.fl-table th {
+    background: rgb(75,49,83)    ;
+    color: #fff;
+}
+
+/* Zebra striping */
+.fl-table tr:nth-of-type(odd) {
+    background: #fafafa;
+}
+
+/* Hover state */
+.fl-table tr:hover {
+    background: #eee;
+}
+
+.fl-table td {
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.fl-table td:last-child {
+    border-right: 0;
+}
+
+
+/* Styles for the buttons */
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: rgb(75,49,83)    ;
+    border-color: rgb(75,49,83)    ;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #d5856d    ;
+    border-color: #d5856d    ;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #d5856d;
+    border-color: #d5856d;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #657b83    ;
+    border-color: #657b83    ;
+}
+
+.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .main-menu {
+        width: 60px;
+
+    }
+
+    .main-menu li > a {
+        padding: 10px 0 10px 60px;
+    }
+
+    .main-menu .nav-text {
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        line-height: 40px;
+        text-align: center;
+        left: 60px;
+        top: 0;
+        width: 100%;
+    }
+
+    .content {
+        width: calc(100% - 60px);
+        margin-left: 60px;
+    }
+
+    .btn {
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+
+    .btn-lg {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .fl-table {
+        font-size: 10px;
+    }
+
+    .fl-table th, .fl-table td {
+        padding: 5px;
+    }
+
+    .table-wrapper {
+        padding: 10px;
+    }
+}

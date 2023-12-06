@@ -1,0 +1,142 @@
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 991px) {
+    .logo {
+        margin-top: 1rem;
+    }
+
+    .links ul {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .menu-btn.open {
+        transform: translateX(100%);
+    }
+
+    .navigation.active {
+        transform: translateX(0);
+    }
+
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-100%);
+        transition: 0.3s;
+        z-index: 99;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+    }
+
+    .navigation a {
+        margin-left: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .navigation a::before {
+        content: "";
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #4b3153        ;
+        z-index: -1;
+        transition: 0.3s;
+    }
+
+    .navigation a::before {
+        content: "";
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #d5856d        ;
+        z-index: -1;
+        transition: 0.3s;
+    }
+
+    .navigation a:hover::before {
+        width: 100%;
+    }
+
+    .navigation a.active::before {
+        width: 100%;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .hero .container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero .left {
+        order: 2;
+    }
+
+    .hero .right {
+        order: 1;
+    }
+
+    .hero .title {
+        font-size: 1.2rem;
+    }
+
+    .hero .desc {
+        font-size: 1rem;
+    }
+
+    .hero .btn {
+        margin-bottom: 1rem;
+    }
+
+    .hero .btn a {
+        font-size: 0.9rem;
+    }
+
+    .hero .img {
+        margin-top: 1rem;
+    }
+
+    .hero .img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .space-area {
+        height: 3rem;
+    }
+
+    .section1 .container {
+        grid-template-columns: 1fr;
+    }
+
+    .section1 .data .container {
+        grid-template-columns: 1fr;
+    }
+
+
+}
